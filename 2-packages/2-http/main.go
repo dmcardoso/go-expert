@@ -1,0 +1,27 @@
+package main
+
+import (
+	"io"
+	"net/http"
+)
+
+func main() {
+	/* Chamadas HTTP
+
+	 */
+
+	req, err := http.Get("https://google.com")
+
+	if err != nil {
+		panic(err)
+	}
+
+	res, err := io.ReadAll(req.Body)
+
+	if err != nil {
+		panic(err)
+	}
+
+	println(string(res))
+	req.Body.Close()
+}

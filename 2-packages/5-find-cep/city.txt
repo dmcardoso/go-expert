@@ -1,0 +1,3 @@
+CEP: 76680-000
+Localidade: Itapuranga
+UF: GO

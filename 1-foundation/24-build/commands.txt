@@ -1,0 +1,10 @@
+go build main.go
+
+GOOS=windows go main buid main.go
+GOOS=linux go main buid main.go
+
+GOOS=darwin GOARCH=amd64 go build main.go
+
+go build
+
+go build -o <output-name>
