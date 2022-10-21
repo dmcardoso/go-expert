@@ -1,0 +1,5 @@
+go work init ./math ./system
+
+
+
+go mod tidy -e

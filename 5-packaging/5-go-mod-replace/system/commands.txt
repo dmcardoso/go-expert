@@ -1,0 +1,3 @@
+Replace local
+
+go mod edit --replace github.com/dmcardoso/go-expert/5-packaging/5-go-mod-replace/math=../math
