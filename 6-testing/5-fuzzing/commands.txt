@@ -1,0 +1,3 @@
+go test -fuzz=.
+go test -fuzz=. -run=^#
+go test -fuzz=. -run=^# -fuzztime=5s
