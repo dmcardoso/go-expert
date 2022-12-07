@@ -1,0 +1,33 @@
+Project layout https://github.com/golang-standards/project-layout
+
+Pastas importantes:
+
+internal -> códigos específicos do projeto e do negócio, não públicas
+pkg -> pasta que é o oposto à pasta internal
+cmd -> pasta que contém o executrável do projeto
+configs -> configurações ou helpers de configurações
+test -> arquivos adicionais que auxiliam nos testes, não os testes em si
+api -> documentações e especificações de api
+
+
+### Web frameworks:
+
+Echo https://echo.labstack.com/
+Fiber https://docs.gofiber.io/
+Gin https://gin-gonic.com/
+
+
+### Toolkits
+
+Gorilla https://www.gorillatoolkit.org/
+
+### Routers
+
+Gorilla Mux https://github.com/gorilla/mux
+Gochi https://go-chi.io/#/
+
+
+### Frameworks (like laravel, adonis, etc):
+
+Gobuffalo https://gobuffalo.io/
+Iris https://www.iris-go.com/

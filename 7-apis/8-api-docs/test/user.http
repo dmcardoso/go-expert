@@ -1,0 +1,29 @@
+@contentType = application/json
+@endpoint = users
+
+# @name CreateUser
+# @prompt name
+# @prompt password
+# @prompt email
+POST {{host}}/{{endpoint}} HTTP/1.1
+Content-Type: {{contentType}}
+
+{
+    "name": "{{name}}",
+    "email": "{{email}}",
+    "password": "{{password}}"
+}
+
+###
+
+@email = {{CreateUser.request.body.$.email}}
+@password = {{CreateUser.request.body.$.password}}
+
+# @name GenerateToken
+POST {{host}}/{{endpoint}}/generate-token HTTP/1.1
+Content-Type: {{contentType}}
+
+{
+    "email": "{{email}}",
+    "password": "{{password}}"
+}

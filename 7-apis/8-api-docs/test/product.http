@@ -1,0 +1,47 @@
+@contentType = application/json
+@endpoint = products
+
+# @name CreateProduct
+# @prompt productName
+# @prompt price
+POST {{host}}/{{endpoint}} HTTP/1.1
+Content-Type: {{contentType}}
+
+{
+    "name": "{{productName}}",
+    "price": {{price}}
+}
+
+###
+
+@productId = {{CreateProduct.response.body.$.id}}
+
+# @name GetProduct
+GET {{host}}/{{endpoint}}/{{productId}} HTTP/1.1
+
+###
+
+# @name UpdateProduct
+# @prompt productName
+# @prompt price
+PUT {{host}}/{{endpoint}}/{{productId}} HTTP/1.1
+Content-Type: {{contentType}}
+
+{
+    "name": "{{productName}}",
+    "price": {{price}}
+}
+
+###
+
+# @name DeleteProduct
+DELETE {{host}}/{{endpoint}}/{{productId}} HTTP/1.1
+Content-Type: {{contentType}}
+
+
+###
+
+# @name ListProducts
+GET {{host}}/{{endpoint}}?page=1&limit=50 HTTP/1.1
+Content-Type: {{contentType}}
+Authorization: Bearer {{token}}
