@@ -1,0 +1,9 @@
+go run main.go
+
+curl http://localhost:3000
+
+Use Apache bench
+ab -n 10000 -c 100 http://localhost:3000
+
+Trace concurrency:
+go run -race main.go
