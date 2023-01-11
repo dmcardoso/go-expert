@@ -1,0 +1,1 @@
+Library utilizada: https://gqlgen.com/

@@ -1,0 +1,29 @@
+Via HHTP:
+
+Criar arquivo 
+
+~/.netrc
+```
+machine github.com
+login <git-user>
+password <token>
+```
+
+Via SSH:
+
+No arquivo .git/config do próprio repo ou no geral do PC
+
+[url "ssh://git@gihub.com/"]
+    insteadOf = https:/github.com/
+
+
+Acessar:
+
+proxy.golang.org
+
+Executar:
+
+go mod vendor
+
+Ele baixa todas as dependências e deixa na raiz do projeto
+*não é muito utilizado
