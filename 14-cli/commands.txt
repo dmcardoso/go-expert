@@ -1,0 +1,15 @@
+Cobra cli:
+https://github.com/spf13/cobra-cli
+
+
+```
+cobra-cli add <command-name>
+```
+
+```
+cobra-cli add <command-name> -p '<command-nested>'
+```
+
+```
+go run main.go completion zsh
+```
