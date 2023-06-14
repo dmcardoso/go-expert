@@ -1,0 +1,5 @@
+Uber: https://github.com/uber-go/fx
+Google wire: https://github.com/google/wire
+
+
+Run: go run main.go wire_gen.go
